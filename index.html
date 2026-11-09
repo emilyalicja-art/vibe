@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vibe</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <main class="app">
+
+        <header class="header">
+            <h1>ALLE SPIL</h1>
+
+            <div class="search-bar">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Søg efter spil..."
+                >
+            </div>
+
+            <div class="header-buttons">
+
+                <button id="sortButton">
+                    Sortere
+                </button>
+
+                <button id="filterButton">
+                    Filtrere
+                </button>
+
+            </div>
+
+        </header>
+
+<section class="games" id="gamesContainer"></section>
+<div class="overlay" id="overlay"></div>
+
+ <section class="filter-panel" id="filterPanel">
+
+            <div class="drag-indicator"></div>
+
+            <h2>Filtrér spil</h2>
+
+            <div class="filter-section">
+
+                <h3>Spiltype</h3>
+
+                <div class="category-buttons">
+
+                    <button class="category-btn active"
+                        data-category="Alle">
+                        Alle
+                    </button>
+
+
+                    <button class="category-btn"
+                        data-category="Brætspil">
+                        Brætspil
+                    </button>
+
+                    <button class="category-btn"
+                        data-category="Kortspil">
+                        Kortspil
+                    </button>
+
+                    <button class="category-btn"
+                        data-category="Partyspil">
+                        Partyspil
+                    </button>
+
+                    <button class="category-btn"
+                        data-category="Strategispil">
+                        Strategispil
+                    </button>
+
+                    <button class="category-btn"
+                        data-category="Hygge">
+                        Hygge
+                    </button>
+                </div>
+
+                <div class="filter-section">
+
+                <h3>Antal spillere</h3>
+
+                <input
+                    type="range"
+                    id="playerFilter"
+                    min="2"
+                    max="10"
+                    value="2"
+                >
+
+                <div class="slider-labels">
+                    <span>2</span>
+                    <span>4</span>
+                    <span>6</span>
+                    <span>8</span>
+                    <span>10+</span>
+                </div>
+
+            </div>
+            <div class="filter-section">
+
+                <h3>Spilletid</h3>
+
+                <div class="duration-options">
+
+                    <label>
+                        <input type="checkbox" value="15">
+                        <span class="custom-checkbox"></span>
+                        Under 15 min
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="30">
+                        <span class="custom-checkbox"></span>
+                        15 - 30 min
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="60">
+                        <span class="custom-checkbox"></span>
+                        30 - 60 min
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="61">
+                        <span class="custom-checkbox"></span>
+                        60+ min
+                    </label>
+
+                </div>
+
+            </div>
+             <div class="filter-actions">
+
+                <button id="resetButton">
+                    Nulstil
+                </button>
+
+                <button id="applyButton">
+                    Anvend
+                </button>
+
+            </div>
+
+
+    </main>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

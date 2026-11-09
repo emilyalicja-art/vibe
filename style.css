@@ -1,0 +1,150 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.app {
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+    background-color: #64143f;
+
+}
+.header {
+    padding: 25px 20px 15px;
+    text-align: center;
+    border-bottom: 1px solid white;
+    position: relative;
+}
+
+.back-button {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+    letter-spacing: 3px;
+}
+
+
+
+
+.games {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    padding: 30px 20px;
+}
+
+.game-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.game-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    border-radius: 30px;
+}
+
+.game-card h3 {
+    color: white;
+    font-size: 18px;
+    text-align: left;
+}
+
+.filter-panel {
+    position: fixed;
+
+    width: 100%;
+    max-width: 430px;
+    height: 78vh;
+    max-height: 850px;
+
+    left: 50%;
+    bottom: 0;
+
+    transform: translate(-50%, 100%);
+
+    background-color: #191536 100% 
+    );
+
+    border-radius: 40px 40px 0 0;
+
+    padding: 20px 25px 30px;
+
+    overflow-y: auto;
+
+    z-index: 11;
+
+    transition: transform 0.35s ease;
+}
+
+.filter-panel.active {
+    transform: translate(-50%, 0);
+}
+
+.filter-section {
+    margin-bottom: 35px;
+}
+
+.filter-section h3 {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+
+
+.filter-panel {
+    position: fixed;
+    width: 90%;
+    max-width: 400px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: #111111;
+    border-radius: 15px;
+
+    padding: 25px;
+    max-height: 85vh;
+    overflow-y: auto;
+
+    z-index: 100;
+
+    display: none;
+}
+
+.filter-panel.active {
+    display: block;
+}
